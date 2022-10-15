@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Open+Sans:ital@1&display=swap');
+
+:root{
+    --gold: gold;
+}
+/*
+*{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition-delay: all .2s linear;
+}
+*::selection{
+    background: var(--gold);
+    color: white;
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+*/
+
+
+
+
+/*media query*/
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+@media(max-width:760px){
+    #menubar{
+        display: initial;
+    }
+    .login{
+        display: initial;
+    }
+
+    header .navbar .active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: gray;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0,0.1);
+        border-left: .5rem solid var(--gold);
+        background: whitesmoke;
+    }
+}
+@media(max-width:400px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+
+
+
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+*{
+    /*margin: 0;*/
+    padding: 0 1%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contain{
+    padding: 1px;
+    margin: 0 auto;
+}
+
+
+
+.menu{
+    border-bottom: 1px solid gray;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color:gray;
+}
+.menu ul li a:hover{
+    color:gold;
+}
+
+.content{
+    background-color: rgb(233, 222, 222);
+    padding: 1% 0;
+}
+
+
+.block{
+    width: 15%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+
+
+
+
+
+
+.text{
+    text-align: center;
+}
+.footer{
+    background-color: gold;
+}
+
+/*manager*/
+.table-manager{
+    width: 100%;
+    padding: 1%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+.add-btn{
+    background-color: green;
+    padding: 1%;
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.add-btn:hover{
+    background-color: limegreen;
+}
+
+.update-btn{
+    background-color: gold;
+    padding: 1%;
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.update-btn:hover{
+    background-color: yellow;
+}
+
+.delete-btn{
+    background-color: maroon;
+    padding: 1%;
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.delete-btn:hover{
+    background-color: red;
+}
+
+.table-add{
+    width: 30%;
+}
+
+/*delete message of admin*/
+.succeed{
+    color: green;
+}
+.failed{
+    color: red;
+}
+
+
+/*admin login*/
+.login{
+    border-radius: 5%;
+    /*width: 24%;
+    border: 1px solid gray;*/
+    margin: 10% 35% auto;
+    /*padding: 10% 5%;*/
+    background-image: url('images/tyler-nix-tmlKgR10H6k-unsplash.jpg');
+    background-size:cover;
+}
+.login-table{
+    margin: 0% 30%;
+    /*padding: 10% 5%;*/
+}
+.login h1{
+    color: rgb(44, 226, 93);
+}
+.login h4{
+    color: rgb(35, 110, 232);
+}
+.login .text a{
+    text-decoration: none;
+}
+
+tr td .register{
+    background-color: blue;
+    padding: 1%;
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    border: 5%;
+
+}
+tr td .register:hover{
+    background-color: lightblue;
+}
+
+
+
+
+
+/*social CSS*/
+.social ul{
+    list-style-type: none;
+}
+
+.social ul li{
+    display: inline;
+    padding: 1.5%;
+    text-decoration: none;
+}
+li{
+    text-decoration: none;
+}
+
+.footer .container p{
+    font-size: small;
+}
+/*end of social CSS*/
+
+.clearfix{
+    clear: both;
+    float: none;
+}

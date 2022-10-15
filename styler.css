@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Open+Sans:ital@1&display=swap');
+
+:root{
+    --gold: gold;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /*text-transform: capitalize;*/
+    transition-delay: all .2s linear;
+}
+*::selection{
+    background: var(--gold);
+    color: white;
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+
+/* Get started */
+.start {
+    background-color: gold;
+}
+.block{
+position: absolute;
+width: 302px;
+height: 520px;
+left: 29px;
+top: 123px;
+
+background-image: url(images/tyler-nix-tmlKgR10H6k-unsplash.jpg);
+}
+.block .bttn{
+    position: absolute;
+width: 115px;
+height: 40px;
+left: 106px;
+top: 544px;
+
+background: #7EB8E2;
+border-radius: 15px;
+}
+
+.block .bttn h4{
+position: absolute;
+width: 81px;
+height: 18px;
+left: 123px;
+top: 555px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #070707;
+}
+
+
+
+
+section{
+    padding: 2rem, 9%;
+}
+
+.heading-menu{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+/* Home page CSS*/
+.home-search{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: linear-gradient(rgba(0,5,5,0.5),rgb(241, 234, 200)), url(images/kota.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;  
+    padding: 0 auto;
+}
+.home-search .container{
+    float: 1 1 40rem;
+    padding-top: 6.5rem;
+    text-align: center;
+}
+.home-search .container h2 a{
+    color: white;
+}
+.home-search .search-box{
+    padding: .8%;
+    width: 40%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+.home-search .submit-btn{
+    padding: 1%;
+    background-color: var(--gold);
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 10%;
+    font-size: 1rem;
+    border: none;
+}
+
+.home-search .submit-btn:hover{
+    background-color: orange;
+}
+
+.container{
+    width: 80%;
+    padding: 1%;
+    margin: 0 auto;
+}
+/* end of home CSS*/
+
+/* header CSS*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: gray;
+}
+header .logo i{
+    padding-right: .5rem;
+    color: var(--gold);
+}
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: grey;
+}
+header .navbar a:hover{
+    color: var(--gold);
+}
+#menubar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: darkgray;
+    border-radius: .3rem;
+    padding: 5rem 1.5rem;
+    display: none;
+}
+/* end of header CSS*/
+
+
+/*media query*/
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+@media(max-width:760px){
+    #menubar{
+        display: initial;
+    }
+
+    header .navbar .active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: gray;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        /*clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);*/
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0,0.1);
+        border-left: .5rem solid var(--gold);
+        background: whitesmoke;
+    }
+}
+@media(max-width:400px){
+    html{
+        font-size: 50%;
+    }
+}
+
+/* Category/Explore CSS*/
+.category .category-container{
+    padding: 1% 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: rgb(235, 232, 232);
+}
+
+.category .category-container .product-box{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.3);
+    cursor: pointer;
+    border-radius: .5rem;
+    margin: 1%;
+    padding: 2;
+    width: 28%;
+}
+
+.category .category-container .product-box .category-content{
+    text-align: center;
+    background: white;
+    padding: 2rem;
+}
+
+.category .category-container .product-box .category-content img{
+    margin: 1.5rem 0;
+    height: 100%;
+    width: 100%;
+}
+
+.category .category-container .product-box .category-content h3{
+    font-size: 2.5rem;
+    color: black;
+}
+
+.category .category-container .product-box:hover .category-image{
+    top: 0;
+}
+
+.category .category-container .product-box:hover .categoty-content{
+    transform: translate(100%);
+}
+
+.category .category-container .product-box .category-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%; left: 0;
+    border-radius: 10px;
+    transition: 1s;
+}
+/*end of category/explore CSS*/
+
+/* menu section */
+.food-menu{
+    background-color: rgb(235, 232, 232);
+    padding: 4% 0;
+}
+
+.container{
+    padding: 1% 0;
+    margin: 0 auto;
+}
+
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+.food-menu-image img{
+    width: 18%;
+    float: left;
+}
+
+.food-menu-boxes{
+    width: 70%;
+    float: left;
+    margin-left: 10%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.food-info{
+    font-size: small;
+}
+
+.order-btn{
+    padding: 1%;
+    background-color: var(--gold);
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 10%;
+    font-size: 1rem;
+    border: none;
+}
+.order-btn:hover{
+    background-color: orange;
+}
+/* end of menu CSS*/
+
+/*social CSS*/
+.social ul{
+    list-style-type: none;
+}
+
+.social ul li{
+    display: inline;
+    padding: 1.5%;
+}
+
+.footer .container p{
+    font-size: small;
+}
+/*end of social CSS*/
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+
+
+/*ordering page CSS*/
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(15, 15, 15);
+}
+legend{
+    font-size: medium;
+    color: var(--gold);
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+.order{
+    width: 100%;
+}
+
+/*order messages*/
+.succeed{
+    padding: 2%;
+    color: green;
+}
+.failed{
+    padding: 2%;
+    color: red;
+}
+
+
+
+
+
+
+/*login page*/
+.bloc{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.2);
+}
+.box > input{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0 16px;
+    height: 36px;
+    margin-bottom: 1rem;
+}
+.box > button{
+    background-color: black;
+    border: 0;
+    border-radius: 8px;
+    height: 36px;
+    color: white;
+}
+.log{
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
